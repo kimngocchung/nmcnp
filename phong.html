@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Các thư viện và tài nguyên cần thiết -->
+    <!-- ... (giữ nguyên phần head hiện tại) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng</title>
+
+    <!-- Các thư viện và tài nguyên cần thiết -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="phong.css">
+
+
+    <script>
+          $(document).ready(function () {
+        $(".toggle-button").click(function () {
+            var paragraph = $(this).siblings(".hidden-paragraph");
+            paragraph.toggleClass("expanded");
+            var buttonText = paragraph.hasClass("expanded") ? "Thu gọn" : "Xem thêm";
+            $(this).text(buttonText);
+
+            // Hiển thị "..." thay vì phần ẩn khi ấn xem thêm
+            
+            
+        });
+    });
+    </script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+            <ul class="nav navbar-nav - d-flex justify-content-center " style="flex-direction: row;">
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#gioithieu">Giới Thiệu</a></li>
+                <li><a href="#">Phòng</a></li>
+                <li><a href="#tienich">Tiện Nghi</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+           
+        </div>
+    </nav>
+
+    <!-- Danh sách phòng -->
+    <div id="roomList" style="margin-top:70px;">
+        <h2 style = "text-align: center;" >Danh sách phòng</h2>
+
+        <div class="container">
+            <div class="card custom-card" style="margin-top:40px;">
+              <!-- Phần 1 -->
+              <div class="card text-center">
+                <div class="image-container">
+                <img src="img/mau-phong-khach-san-mini-dep-2.jpg" class="card-img-top" alt="">
+              </div>
+  
+              </div>
+          
+              <!-- Phần 2 -->
+              <div class="card">
+                <h3>Phòng 1</h3>
+                <p style="font-size: 20px;">Tiện ích</p>
+                <ol class = "facility">
+                  <li>Bể bơi</li>
+                  <li>Wifi miễn phí</li>
+                  <li>Spa</li>
+                  <li>Khu xông hơi</li>
+                </ol>
+                <p style="font-size: 20px;margin-top: 1px;">Loại phòng: phòng vip</p>
+                <p style="font-size: 20px;">Số lượng: 2 người</p>
+                <p style="font-size: 20px;">Giảm giá: 0</p>
+                <p style="font-size: 20px; ">Giá trung bình mỗi đêm: 3.146.000 đ</p>
+                
+              </div>
+          
+              <!-- Phần 3 -->
+              <div class="card">
+                <div class="card-body">
+                    <p style="font-size: 30px; text-align: center;">Đánh giá</p>
+                </div>
+                <div class="card-body">
+                    <p style="font-size: 20px;">Phản hồi khách hàng</p>
+                    <div class="toggle-button">Xem thêm</div>
+                    <div class="hidden-paragraph">
+                        <p style="font-size: 15px;">
+                            Rất cảm ơn khách sạn đã cho chúng tôi cảm nhận được một sự tiếp đãi rất tốt dịch vụ rất tuyệt vời. Chúng tôi xin chân thành cảm ơn quý Khách sạn và nhất định lần sau cũng sẽ ngủ lại khách sạn mỗi khi chúng tôi có dịp đến Hà nội.
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-booking">Đặt phòng</button>
+                </div>
+            </div>
+    </div>
+
+      
+          <div  class="card custom-card " style="margin-top: 20px;" >
+            <!-- Phần 1 -->
+            <div class="card">
+              <div class="image-container">
+              <img src="img/phong-ngu-khach-san-2.jpg" class="card-img-top" alt="">
+            </div>
+            </div>
+        
+            <!-- Phần 2 -->
+            <div class="card">
+              <h3>Phòng 2</h3>
+              <p style="font-size: 20px;">Tiện ích</p>
+              <ol class = "facility">
+                <li>Bể bơi</li>
+                <li>Wifi miễn phí</li>
+                <li>Spa</li>
+                <li>Khu xông hơi</li>
+              </ol>
+              <p style="font-size: 20px;margin-top: 1px;">Loại phòng: phòng vip</p>
+              <p style="font-size: 20px;">Số lượng: 2 người</p>
+              <p style="font-size: 20px;">Giảm giá: 0</p>
+              <p style="font-size: 20px; ">Giá trung bình mỗi đêm: 3.146.000 đ</p>
+              
+            </div>
+        
+            <!-- Phần 3 -->
+            <div class="card">
+              <div class="card-body">
+                  <p style="font-size: 30px; text-align: center;">Đánh giá</p>
+              </div>
+              <div class="card-body">
+                  <p style="font-size: 20px;">Phản hồi khách hàng</p>
+                  <div class="toggle-button">Xem thêm</div>
+                  <div class="hidden-paragraph">
+                      <p style="font-size: 15px;">
+                          Rất cảm ơn khách sạn đã cho chúng tôi cảm nhận được một sự tiếp đãi rất tốt dịch vụ rất tuyệt vời. Chúng tôi xin chân thành cảm ơn quý Khách sạn và nhất định lần sau cũng sẽ ngủ lại khách sạn mỗi khi chúng tôi có dịp đến Hà nội.
+                      </p>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-booking">Đặt phòng</button>
+              </div>
+          </div>
+  </div>
+  
+        <div class="card custom-card" style="margin-top: 20px;">
+          <!-- Phần 1 -->
+          <div class="card">
+            <div class="image-container">
+            <img src="img/phong-tieu-chuan-KS-my-way-84-duy-tan-800x470.jpg" class="card-img-top" alt="">
+            </div>
+          </div>
+      
+          <!-- Phần 2 -->
+          <div class="card">
+            <h3>Phòng 3</h3>
+            <p style="font-size: 20px;">Tiện ích</p>
+            <ol class = "facility">
+              <li>Bể bơi</li>
+              <li>Wifi miễn phí</li>
+              <li>Spa</li>
+              <li>Khu xông hơi</li>
+            </ol>
+            <p style="font-size: 20px;margin-top: 1px;">Loại phòng: phòng vip</p>
+            <p style="font-size: 20px;">Số lượng: 2 người</p>
+            <p style="font-size: 20px;">Giảm giá: 0</p>
+            <p style="font-size: 20px; ">Giá trung bình mỗi đêm: 3.146.000 đ</p>
+            
+          </div>
+      
+          <!-- Phần 3 -->
+          <div class="card">
+            <div class="card-body">
+                <p style="font-size: 30px; text-align: center;">Đánh giá</p>
+            </div>
+            <div class="card-body">
+                <p style="font-size: 20px;">Phản hồi khách hàng</p>
+                <div class="toggle-button">Xem thêm</div>
+                <div class="hidden-paragraph">
+                    <p style="font-size: 15px;">
+                        Rất cảm ơn khách sạn đã cho chúng tôi cảm nhận được một sự tiếp đãi rất tốt dịch vụ rất tuyệt vời. Chúng tôi xin chân thành cảm ơn quý Khách sạn và nhất định lần sau cũng sẽ ngủ lại khách sạn mỗi khi chúng tôi có dịp đến Hà nội.
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary btn-booking">Đặt phòng</button>
+            </div>
+        </div>
+</div>
+</body>
+</html>

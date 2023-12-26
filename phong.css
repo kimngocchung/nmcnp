@@ -1,0 +1,127 @@
+
+        /* CSS tùy chỉnh cho thanh điều hướng */
+        .navbar-custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            border-color: #333;
+            color: white;
+        }
+
+        .navbar-custom .navbar-nav > li {
+            display: flex;
+            margin: 5px 15px;
+            padding: 0 80px;
+        }
+
+        .navbar-custom .navbar-nav > li > a {
+            flex-direction: none;
+            color: white;
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .navbar-custom .navbar-nav > li > a:hover,
+        .navbar-custom .navbar-nav > li > a:focus {
+            color: darkgray;
+        }
+
+       
+        /* CSS tùy chỉnh cho cột phòng */
+      .custom-card {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+    }
+
+      .custom-card .card {
+            flex: 1;
+            margin-right: 10px; /* Điều chỉnh khoảng cách giữa các phần */
+            border: none; /* Loại bỏ khung */
+    }
+
+       
+      .KS{
+          text-decoration: none;
+          font-size: 40px;
+          color: black;
+      }
+
+        .image-container {
+   text-align: center;
+}
+
+.image-container img {
+   display: inline-block;
+}
+
+        
+      ol li {
+          font-weight: normal;
+          list-style-type: none;
+          display: inline-block;
+          border: 1px solid #ccc; /* Thêm khung với màu sắc và độ rộng mong muốn */
+          padding: 5px; /* Thêm padding để tạo khoảng cách giữa nội dung và khung */
+          margin-bottom: 10px; /* Khoảng cách giữa các mục danh sách */
+          margin-right: 4px;
+      }
+      .custom-card .card {
+          flex: 1;
+          margin-right: 10px;
+          border: none;
+          display: flex;
+          flex-direction: column; /* Hiển thị các phần tử con theo chiều dọc */
+      }
+
+      .custom-card .card h3,
+      .custom-card .card p {
+          margin: 0; /* Loại bỏ margin mặc định */
+      }
+
+      .custom-card .card ol {
+          margin-top: 10px;
+      }
+
+      .custom-card .card ol li {
+          font-weight: normal;
+          list-style-type: none;
+          display: inline-block;
+          border: 1px solid #ccc;
+          padding: 5px;
+          margin-bottom: 10px;
+          margin-right: 4px;
+      }
+
+      .custom-card .card p {
+          font-size: 20px;
+          margin-bottom: 1px; /* Khoảng cách giữa các phần tử dạng đoạn văn */
+      }
+      /* CSS tùy chỉnh cho đoạn văn ẩn */
+          /* Trong tệp CSS (ví dụ: styles.css) */
+
+      .hidden-paragraph {
+          overflow: hidden;
+          max-height:20px;
+          transition: max-height 0.5s ease;
+          position: relative; /* Thêm thuộc tính position: relative; */
+      }
+
+      .expanded {
+                  max-height: 1000px; /* Chiều cao tối đa khi đã mở rộng */
+              }
+      .toggle-button {
+                  cursor: pointer;
+                  color: blue;
+                  clear: both;
+              }
+      .btn-booking:not(.toggle-button) {
+          margin: auto; /* Để căn giữa theo chiều ngang */
+          display: block; /* Để nút chiếm toàn bộ chiều rộng của container */
+          margin-top: 50px;
+          font-size: 20px;
+          color:white;
+          background-color:#333;
+          border: none;
+          /* Các thuộc tính khác theo ý muốn của bạn */
+      }

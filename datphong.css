@@ -1,0 +1,94 @@
+/* CSS tùy chỉnh cho thanh điều hướng */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    border-color: #333;
+    color: white;
+}
+
+.navbar-custom .navbar-nav > li {
+    display: flex;
+    margin: 5px 15px;
+    padding: 0px 80px;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    color: darkgray;
+}
+
+/* CSS tùy chỉnh cho bảng danh sách đặt phòng */
+.table-custom {
+    margin: 20px auto;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.table-custom th, .table-custom td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-custom th {
+    background-color: #333;
+    color: white;
+}
+
+
+.table-custom td {
+    text-align: center;
+ }
+.table-custom tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-custom tr:hover {
+    background-color: #ddd;
+}
+
+.table-custom button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.table-custom button:hover {
+    background-color: darkgray;
+}
+
+@media screen and (max-width: 768px) {
+    .table-custom, .table-custom th, .table-custom td {
+        display: block;
+    }
+
+    .table-custom th, .table-custom td {
+        border: none;
+    }
+
+    .table-custom th {
+        background-color: transparent;
+        color: black;
+    }
+
+    .table-custom td {
+        margin-bottom: 10px;
+    }
+
+    .table-custom td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+    }
+}
