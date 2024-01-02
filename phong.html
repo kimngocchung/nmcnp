@@ -28,6 +28,34 @@
             
         });
     });
+
+    $(document).ready(function () {
+    // Mở hộp thoại modal khi nút "Đặt phòng" được nhấn
+    $(".btn-booking").click(function () {
+      $("#bookingModal").modal("show");
+    });
+
+    // Xử lý khi biểu mẫu được nộp
+    $("#bookingForm").submit(function (event) {
+      // Ngăn chặn việc nộp biểu mẫu mặc định
+      event.preventDefault();
+
+      // Lấy thông tin của khách hàng
+      var customerName = $("#customerName").val();
+      var phoneNumber = $("#phoneNumber").val();
+      var email = $("#email").val();
+      var checkInTime = $("#checkInTime").val();
+
+      // Xử lý thông tin của khách hàng theo cách cần (ví dụ: gửi nó đến máy chủ)
+      console.log("Họ và tên:", customerName);
+      console.log("Số điện thoại:", phoneNumber);
+      console.log("Email:", email);
+      console.log("Giờ check in:", checkInTime);
+
+      // Đóng modal sau khi xử lý biểu mẫu
+      $("#bookingModal").modal("hide");
+    });
+  });
     </script>
 </head>
 <body>
@@ -179,6 +207,41 @@
                 <button type="button" class="btn btn-primary btn-booking">Đặt phòng</button>
             </div>
         </div>
+
+        <!-- Modal cho Biểu mẫu Đặt phòng -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookingModalLabel">Đặt phòng - Thông tin khách hàng</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Biểu mẫu Đặt phòng -->
+        <form id="bookingForm">
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Họ và tên:</label>
+            <input type="text" class="form-control" id="customerName" required>
+          </div>
+          <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Số điện thoại:</label>
+            <input type="tel" class="form-control" id="phoneNumber" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="checkInTime" class="form-label">Giờ check in:</label>
+            <input type="text" class="form-control" id="checkInTime" placeholder="VD: 14:00" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Xác nhận đặt phòng</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 </body>
 </html>
